@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+         <ul id="myList">
+             <li class="item">this is javascript practice</li>
+             <li class="item">this is an website</li>
+             <li class="item">the practice lession</li>
+             <li class="item">the practice start here</li>
+             <li class="item">this is gonna be the last line</li>
+         </ul>
+         <button id="addNew">add new item</button>
+    </div>
+    <script>
+        // var items = document.getElementsByClassName('item');
+        // for (let i = 0; i < items.length; i++) {
+        // var item = items[i];
+        // item.addEventListener('click', function (event) {event.target.parentNode.removeChild(event.target)
+        // })
+        // }
+        document.getElementById('addNew').addEventListener('click', function (event) {
+            var itemParent = document.getElementById('myList');
+            var newItem = document.createElement('li');
+            newItem.innerText='brand new item';
+            itemParent.appendChild(newItem);
+        })
+        document.getElementById('myList').addEventListener('click', function (event) {
+            event.target.parentNode.removeChild(event.target);
+        })
+        // document.getElementById('first').addEventListener('click',function(event) {
+        //     console.log('first item is clicked');
+
+        // })
+    </script>
+</body>
+</html>
